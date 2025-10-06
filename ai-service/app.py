@@ -3,6 +3,16 @@ from textblob import TextBlob
 
 app = Flask(__name__)
 
+# Add this root route
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Flask Sentiment Analysis API is running!",
+        "endpoints": {
+            "analyze": "POST /analyze with JSON: {'text': 'your text here'}"
+        }
+    })
+
 @app.route("/analyze", methods=["POST"])
 def analyze_text():
     data = request.get_json()
