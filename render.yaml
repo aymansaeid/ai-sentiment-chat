@@ -10,17 +10,38 @@ services:
       - key: PORT
         value: 10000
 
+services:
+  # Python AI Service
+  # This service runs your Python-based AI model.
+  - type: web
+    name: chat-ai-service
+    plan: free
+    runtime: python
+    buildCommand: pip install -r ai-service/requirements.txt
+    startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
+    envVars:
+      - key: PORT
+        value: 10000
+
   # .NET Backend Service
+  # This service builds and runs your .NET backend using the Dockerfile.
   - type: web
     name: chat-backend
     plan: free
     runtime: docker
-    dockerfilePath: ./ai-service/backend/ChatAIBackend/Dockerfile
-    dockerContext: ./ai-service/backend/ChatAIBackend
+    # Specifies the location of your Dockerfile relative to the repository root.
+    dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
+    # Sets the build context to the root of your repository. This is crucial
+    # because the COPY commands in the Dockerfile use paths starting from the root.
+    dockerContext: .
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
       - key: AIServiceUrl
-        value: https://chat-ai-service.onrender.com/analyze
+        # This should be the public URL of your Python service once deployed.
+        # The URL you provided is used here.
+        value: https://chat-ai-service-px9s.onrender.com
       - key: PORT
+        # Render will set this environment variable, and your .NET application
+        # is already configured to listen on this port.
         value: 10000
