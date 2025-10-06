@@ -10,13 +10,12 @@ services:
       - key: PORT
         value: 10000
 
-  # .NET Backend Service
   - type: web
     name: chat-backend
     plan: free
     runtime: docker
     dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
-    dockerContext: ai-service  
+    dockerContext: ai-service
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production

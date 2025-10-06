@@ -2,13 +2,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy everything from the backend folder into container
+# Copy all files in build context (which starts at ai-service/)
 COPY . .
 
-# Navigate into the project folder (contains ChatAIBackend.csproj)
+# Navigate to the project directory
 WORKDIR /src/backend/ChatAIBackend/ChatAIBackend
 
-# Restore dependencies and publish
+# Restore and publish
 RUN dotnet restore "ChatAIBackend.csproj"
 RUN dotnet publish "ChatAIBackend.csproj" -c Release -o /app/publish
 
