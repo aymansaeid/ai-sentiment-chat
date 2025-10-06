@@ -3,11 +3,18 @@ services:
   - type: web
     name: chat-backend
     plan: free
-    runtime: docker
-    dockerfilePath: backend/ChatAIBackend/Dockerfile
+    buildCommand: |
+      cd backend/ChatAIBackend
+      dotnet restore
+      dotnet publish -c Release -o output
+    startCommand: |
+      cd backend/ChatAIBackend
+      dotnet output/ChatAIBackend.dll
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:8080
       - key: AIServiceUrl
         value: https://chat-ai-service.onrender.com/analyze
 
@@ -16,5 +23,5 @@ services:
     name: chat-ai-service
     plan: free
     runtime: python
-    buildCommand: pip install -r ai-service/requirements.txt
-    startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
+    buildCommand: cd ai-service && pip install -r requirements.txt
+    startCommand: cd ai-service && gunicorn app:app --bind 0.0.0.0:$PORT
