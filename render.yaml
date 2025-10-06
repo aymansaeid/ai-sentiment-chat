@@ -20,7 +20,7 @@ services:
     plan: free
     runtime: python
     buildCommand: pip install -r ai-service/requirements.txt
-    startCommand: gunicorn app:app -b 0.0.0.0:$PORT
+    startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
     envVars:
       - key: PORT
         value: 10000
