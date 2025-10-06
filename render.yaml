@@ -14,9 +14,12 @@ services:
   - type: web
     name: chat-backend
     plan: free
-    runtime: docker
-    dockerfilePath: Dockerfile
-    dockerContext: .
+    env: dotnet
+    rootDirectory: backend
+    buildCommand: |
+      dotnet restore
+      dotnet publish -c Release -o output
+    startCommand: dotnet output/ChatAlBackend.dll
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
