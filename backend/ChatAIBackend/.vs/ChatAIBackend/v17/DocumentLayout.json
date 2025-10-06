@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\models\\sentimentresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\models\\sentimentresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\models\\huggingfaceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\models\\huggingfaceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\models\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\models\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\migrations\\dbmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\migrations\\dbmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\models\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\models\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|c:\\users\\2a04\\desktop\\konusrak ogren project\\ai-service\\backend\\chataibackend\\chataibackend\\migrations\\20251005182557_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}|ChatAIBackend\\ChatAIBackend.csproj|solutionrelative:chataibackend\\migrations\\20251005182557_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 363,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251005182557_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Migrations\\20251005182557_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Migrations\\20251005182557_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Migrations\\20251005182557_InitialCreate.cs",
+              "RelativeToolTip": "ChatAIBackend\\Migrations\\20251005182557_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:25:57.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessagesController.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Controllers\\MessagesController.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Controllers\\MessagesController.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Controllers\\MessagesController.cs",
+              "RelativeToolTip": "ChatAIBackend\\Controllers\\MessagesController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:17:55.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SentimentResult.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\SentimentResult.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Models\\SentimentResult.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\SentimentResult.cs",
+              "RelativeToolTip": "ChatAIBackend\\Models\\SentimentResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T07:22:49.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HuggingFaceResponse.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\HuggingFaceResponse.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Models\\HuggingFaceResponse.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\HuggingFaceResponse.cs",
+              "RelativeToolTip": "ChatAIBackend\\Models\\HuggingFaceResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T20:14:43.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\appsettings.json",
+              "RelativeDocumentMoniker": "ChatAIBackend\\appsettings.json",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\appsettings.json",
+              "RelativeToolTip": "ChatAIBackend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-05T17:56:45.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DBModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Migrations\\DBModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Migrations\\DBModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Migrations\\DBModelSnapshot.cs",
+              "RelativeToolTip": "ChatAIBackend\\Migrations\\DBModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:27:05.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Program.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Program.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Program.cs",
+              "RelativeToolTip": "ChatAIBackend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:58:44.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\MessageDto.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Models\\MessageDto.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\MessageDto.cs",
+              "RelativeToolTip": "ChatAIBackend\\Models\\MessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T18:28:57.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\DB.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Models\\DB.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\DB.cs",
+              "RelativeToolTip": "ChatAIBackend\\Models\\DB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:54:36.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "ChatAIBackend\\Models\\Message.cs",
+              "ToolTip": "C:\\Users\\2A04\\Desktop\\konusrak ogren project\\ai-service\\backend\\ChatAIBackend\\ChatAIBackend\\Models\\Message.cs",
+              "RelativeToolTip": "ChatAIBackend\\Models\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:53:56.233Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

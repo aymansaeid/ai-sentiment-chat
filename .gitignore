@@ -24,3 +24,17 @@ Thumbs.db
 
 # PyTorch model cache (optional, but can be large)
 .huggingface/
+
+# .NET
+bin/
+obj/
+*.user
+*.aps
+*.pdb
+*.db
+
+# Node.js (for React later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

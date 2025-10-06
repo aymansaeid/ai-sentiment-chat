@@ -1,0 +1,21 @@
+services:
+  # .NET Backend Service
+  - type: web
+    name: chat-backend
+    env: dotnet
+    rootDirectory: backend
+    buildCommand: dotnet restore && dotnet publish -c Release -o output
+    startCommand: dotnet output/YourApp.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: AIServiceUrl
+        value: https://chat-ai-service.onrender.com/analyze
+
+  # Python AI Service
+  - type: web
+    name: chat-ai-service
+    env: python
+    rootDirectory: ai-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app -b 0.0.0.0:$PORT
