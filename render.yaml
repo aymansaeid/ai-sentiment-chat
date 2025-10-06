@@ -11,10 +11,10 @@ services:
       - key: AIServiceUrl
         value: https://chat-ai-service.onrender.com/analyze
 
-  # Python AI Service - FIXED
+  # Python AI Service 
   - type: web
     name: chat-ai-service
     plan: free
     runtime: python
-    buildCommand: cd ai-service && pip install -r requirements.txt
-    startCommand: cd ai-service && gunicorn app:app --bind 0.0.0.0:$PORT
+    buildCommand: cd ai-service && pip install -r requirements.txt && pip install gunicorn
+    startCommand: cd ai-service && python -m gunicorn app:app --bind 0.0.0.0:$PORT
