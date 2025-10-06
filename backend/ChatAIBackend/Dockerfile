@@ -1,19 +1,18 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+﻿# Use .NET SDK to build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy the project file first to restore dependencies
-COPY backend/ChatAIBackend/ChatAIBackend/ChatAIBackend.csproj ./ChatAIBackend/
-RUN dotnet restore "./ChatAIBackend/ChatAIBackend.csproj"
+# Copy everything from the backend folder into container
+COPY . .
 
-# Copy the rest of the source code
-COPY backend/ChatAIBackend/ ./
-WORKDIR /src/ChatAIBackend/ChatAIBackend
+# Navigate into the project folder (contains ChatAIBackend.csproj)
+WORKDIR /src/backend/ChatAIBackend/ChatAIBackend
 
-# Build and publish
-RUN dotnet build "ChatAIBackend.csproj" -c Release -o /app/build
+# Restore dependencies and publish
+RUN dotnet restore "ChatAIBackend.csproj"
 RUN dotnet publish "ChatAIBackend.csproj" -c Release -o /app/publish
 
-# Final image
+# Final runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .

@@ -1,20 +1,5 @@
 services:
-# .NET Backend Service
-  - type: web
-    name: chat-backend
-    plan: free
-    runtime: docker
-    dockerfilePath: backend/ChatAIBackend/Dockerfile  # Fixed path
-    dockerContext: .  # Build from repo root
-    envVars:
-      - key: ASPNETCORE_ENVIRONMENT
-        value: Production
-      - key: AIServiceUrl
-        value: https://chat-ai-service-px9s.onrender.com/analyze
-      - key: PORT
-        value: 10000
-
-  # Python AI Service 
+  # Python AI Service
   - type: web
     name: chat-ai-service
     plan: free
@@ -22,5 +7,20 @@ services:
     buildCommand: pip install -r ai-service/requirements.txt
     startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
     envVars:
+      - key: PORT
+        value: 10000
+
+  # .NET Backend Service
+  - type: web
+    name: chat-backend
+    plan: free
+    runtime: docker
+    dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
+    dockerContext: ai-service  
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: AIServiceUrl
+        value: https://chat-ai-service-px9s.onrender.com/analyze
       - key: PORT
         value: 10000
