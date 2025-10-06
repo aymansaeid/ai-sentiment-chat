@@ -29,8 +29,8 @@ services:
     name: chat-backend
     plan: free
     runtime: docker
-    # Specifies the location of your Dockerfile relative to the repository root.
-    dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
+    # CORRECTED: The path to the Dockerfile no longer has the incorrect "ai-service/" prefix.
+    dockerfilePath: backend/ChatAIBackend/Dockerfile
     # Sets the build context to the root of your repository. This is crucial
     # because the COPY commands in the Dockerfile use paths starting from the root.
     dockerContext: .
