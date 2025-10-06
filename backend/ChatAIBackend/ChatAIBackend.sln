@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAIBackend", "ChatAIBackend\ChatAIBackend.csproj", "{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00295B3-F24D-4CA4-93AD-B8C1CAF743AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {884613A4-1C79-43C7-9C1E-2105B56A81D3}
+	EndGlobalSection
+EndGlobal

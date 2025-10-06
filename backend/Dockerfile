@@ -2,15 +2,15 @@
 WORKDIR /src
 
 # Copy solution and project files
-COPY ["backend/ChatAlBackend.sln", "./"]
-COPY ["backend/ChatAlBackend/ChatAlBackend.csproj", "backend/ChatAlBackend/"]
+COPY ["ChatAlBackend.sln", "./"]
+COPY ["ChatAlBackend/ChatAlBackend.csproj", "ChatAlBackend/"]
 RUN dotnet restore "ChatAlBackend.sln"
 
 # Copy everything else
 COPY . .
 
 # Build and publish
-WORKDIR "/src/backend/ChatAlBackend"
+WORKDIR "/src/ChatAlBackend"
 RUN dotnet build "ChatAlBackend.csproj" -c Release -o /app/build
 RUN dotnet publish "ChatAlBackend.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
