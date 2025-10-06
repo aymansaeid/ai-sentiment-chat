@@ -1,19 +1,20 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["ChatAlBackend.csproj", "."]
-RUN dotnet restore "ChatAlBackend.csproj"
-COPY . .
-RUN dotnet build "ChatAlBackend.csproj" -c Release -o /app/build
 
-FROM build AS publish
+# Copy solution and project files
+COPY ["backend/ChatAlBackend.sln", "./"]
+COPY ["backend/ChatAlBackend/ChatAlBackend.csproj", "backend/ChatAlBackend/"]
+RUN dotnet restore "ChatAlBackend.sln"
+
+# Copy everything else
+COPY . .
+
+# Build and publish
+WORKDIR "/src/backend/ChatAlBackend"
+RUN dotnet build "ChatAlBackend.csproj" -c Release -o /app/build
 RUN dotnet publish "ChatAlBackend.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ChatAlBackend.dll"]

@@ -9,16 +9,28 @@ services:
     envVars:
       - key: PORT
         value: 10000
-        
+
+services:
+  # Python AI Service
+  # This service runs your Python-based AI model.
   - type: web
-    name: chatal-backend
-    env: dotnet
+    name: chat-ai-service
     plan: free
-    rootDirectory: backend/ChatAlBackend
-    buildCommand: dotnet restore && dotnet publish -c Release -o ./publish
-    startCommand: dotnet ./publish/ChatAlBackend.dll
+    runtime: python
+    buildCommand: pip install -r ai-service/requirements.txt
+    startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
+    envVars:
+      - key: PORT
+        value: 10000
+
+  - type: web
+    name: chat-backend
+    plan: free
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: .
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
-      - key: ASPNETCORE_URLS
-        value: http://*:8080
+      - key: AIServiceUrl
+        value: https://chat-ai-service-px9s.onrender.com
