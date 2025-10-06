@@ -15,26 +15,22 @@ namespace ChatAIBackend.Controllers
     {
         private readonly DB _context;
         private readonly HttpClient _httpClient;
+        private readonly string _aiUrl; 
 
 
-        public MessagesController(DB context, IHttpClientFactory httpClientFactory)
+        public MessagesController(DB context, IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
             _context = context;
             _httpClient = httpClientFactory.CreateClient();
+            _aiUrl = configuration["AIServiceUrl"];
         }
-
 
         [HttpPost("send")]
         public async Task<IActionResult> SendMessage([FromBody] MessageDto dto)
         {
-            var aiUrl = "http://localhost:5001/analyze";
-
-
             var payload4HF = new { text = dto.Content };
 
-
-
-            var msg = await _httpClient.PostAsJsonAsync(aiUrl, payload4HF);
+            var msg = await _httpClient.PostAsJsonAsync(_aiUrl, payload4HF);
 
             if (!msg.IsSuccessStatusCode)
             {
@@ -44,10 +40,6 @@ namespace ChatAIBackend.Controllers
 
             var result = await msg.Content.ReadFromJsonAsync<Dictionary<string, string>>();
             string sentiment = result != null && result.ContainsKey("sentiment") ? result["sentiment"] : "UNKNOWN";
-
-
-            
-
 
             var message = new Message
             {
