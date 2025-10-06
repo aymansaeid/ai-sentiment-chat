@@ -3,22 +3,15 @@ services:
   - type: web
     name: chat-backend
     plan: free
-    buildCommand: |
-      cd backend/ChatAIBackend
-      dotnet restore
-      dotnet publish -c Release -o output
-    startCommand: |
-      cd backend/ChatAIBackend
-      dotnet output/ChatAIBackend.dll
+    runtime: docker
+    dockerfilePath: backend/ChatAIBackend/Dockerfile
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
-      - key: ASPNETCORE_URLS
-        value: http://0.0.0.0:8080
       - key: AIServiceUrl
         value: https://chat-ai-service.onrender.com/analyze
 
-  # Python AI Service
+  # Python AI Service - FIXED
   - type: web
     name: chat-ai-service
     plan: free
