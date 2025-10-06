@@ -1,14 +1,16 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy the entire solution/project structure
-COPY ai-service/backend/ChatAIBackend/ ./
+# Copy the project file first to restore dependencies
+COPY backend/ChatAIBackend/ChatAIBackend/ChatAIBackend.csproj ./ChatAIBackend/
+RUN dotnet restore "./ChatAIBackend/ChatAIBackend.csproj"
 
-# Navigate to the project directory
-WORKDIR /src/ChatAIBackend
+# Copy the rest of the source code
+COPY backend/ChatAIBackend/ ./
+WORKDIR /src/ChatAIBackend/ChatAIBackend
 
-# Restore and publish
-RUN dotnet restore "ChatAIBackend.csproj"
+# Build and publish
+RUN dotnet build "ChatAIBackend.csproj" -c Release -o /app/build
 RUN dotnet publish "ChatAIBackend.csproj" -c Release -o /app/publish
 
 # Final image

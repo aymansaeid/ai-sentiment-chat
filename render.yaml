@@ -1,16 +1,16 @@
 services:
-  # .NET Backend Service
+# .NET Backend Service
   - type: web
     name: chat-backend
     plan: free
     runtime: docker
-    dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
+    dockerfilePath: backend/ChatAIBackend/Dockerfile  # Fixed path
     dockerContext: .  # Build from repo root
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
       - key: AIServiceUrl
-        value: https://chat-ai-service.onrender.com/analyze
+        value: https://chat-ai-service-px9s.onrender.com/analyze
       - key: PORT
         value: 10000
 
