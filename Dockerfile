@@ -5,16 +5,16 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy from parent directory (repository root)
-COPY ["../backend/ChatAlBackend.sln", "./"]
-COPY ["../backend/ChatAlBackend/ChatAlBackend.csproj", "ChatAlBackend/"]
-RUN dotnet restore "ChatAlBackend.sln"
+# Copy solution and project files
+COPY ["backend/ChatAlBackend.sln", "backend/"]
+COPY ["backend/ChatAlBackend/ChatAlBackend.csproj", "backend/ChatAlBackend/"]
+RUN dotnet restore "backend/ChatAlBackend.sln"
 
-# Copy everything else from parent
-COPY ../ ./
+# Copy everything else
+COPY . .
 
 # Build and publish
-WORKDIR "/src/ChatAlBackend"
+WORKDIR "/src/backend/ChatAlBackend"
 RUN dotnet build "ChatAlBackend.csproj" -c Release -o /app/build
 
 FROM build AS publish
