@@ -1,10 +1,10 @@
 services:
-  # .NET Backend Service
+ # .NET Backend Service
   - type: web
     name: chat-backend
     plan: free
     runtime: docker
-    dockerfilePath: backend/ChatAIBackend/Dockerfile
+    dockerfilePath: ai-service/backend/ChatAIBackend/Dockerfile
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
@@ -16,5 +16,5 @@ services:
     name: chat-ai-service
     plan: free
     runtime: python
-    buildCommand: cd ai-service && pip install -r requirements.txt && pip install gunicorn
-    startCommand: cd ai-service && python -m gunicorn app:app --bind 0.0.0.0:$PORT
+    buildCommand: pip install -r ai-service/requirements.txt
+    startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
