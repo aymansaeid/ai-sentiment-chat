@@ -3,8 +3,8 @@ services:
   - type: web
     name: chat-backend
     plan: free
-    buildCommand: cd backend/ChatAIBackend && dotnet restore && dotnet publish -c Release -o output
-    startCommand: cd backend/ChatAIBackend && dotnet output/ChatAIBackend.dll
+    runtime: docker
+    dockerfilePath: backend/ChatAIBackend/Dockerfile
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
@@ -15,5 +15,6 @@ services:
   - type: web
     name: chat-ai-service
     plan: free
-    buildCommand: cd ai-service && pip install -r requirements.txt
+    runtime: python
+    buildCommand: pip install -r ai-service/requirements.txt
     startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
