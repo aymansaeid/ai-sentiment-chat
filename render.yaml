@@ -15,7 +15,7 @@ services:
     name: chat-backend
     plan: free
     runtime: docker
-    dockerfilePath: backend/Dockerfile
+    dockerfilePath: Dockerfile
     dockerContext: .
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
