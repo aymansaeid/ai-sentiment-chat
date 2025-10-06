@@ -2,9 +2,9 @@ services:
   # .NET Backend Service
   - type: web
     name: chat-backend
-    env: dotnet
-    buildCommand: cd backend/ChatAIBackend/ChatAIBackend && dotnet restore && dotnet publish -c Release -o output
-    startCommand: cd backend/ChatAIBackend/ChatAIBackend && dotnet output/ChatAIBackend.dll
+    plan: free
+    buildCommand: cd backend/ChatAIBackend && dotnet restore && dotnet publish -c Release -o output
+    startCommand: cd backend/ChatAIBackend && dotnet output/ChatAIBackend.dll
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
@@ -14,6 +14,6 @@ services:
   # Python AI Service
   - type: web
     name: chat-ai-service
-    env: python
+    plan: free
     buildCommand: cd ai-service && pip install -r requirements.txt
     startCommand: cd ai-service && gunicorn app:app -b 0.0.0.0:$PORT
