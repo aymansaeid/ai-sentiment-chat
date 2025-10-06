@@ -3,7 +3,7 @@ services:
   - type: web
     name: chat-backend
     env: dotnet
-    rootDirectory: backend
+    rootDirectory: backend/ChatAIBackend  
     buildCommand: dotnet restore && dotnet publish -c Release -o output
     startCommand: dotnet output/ChatAIBackend.dll
     envVars:
