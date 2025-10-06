@@ -1,13 +1,13 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy everything from the repository
-COPY . .
+# Copy the entire solution/project structure
+COPY ai-service/backend/ChatAIBackend/ ./
 
-# Move to the actual project folder where the .csproj exists
-WORKDIR /src/ai-service/backend/ChatAIBackend/ChatAIBackend
+# Navigate to the project directory
+WORKDIR /src/ChatAIBackend
 
-# Restore and publish the project
+# Restore and publish
 RUN dotnet restore "ChatAIBackend.csproj"
 RUN dotnet publish "ChatAIBackend.csproj" -c Release -o /app/publish
 
@@ -15,5 +15,6 @@ RUN dotnet publish "ChatAIBackend.csproj" -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENV ASPNETCORE_URLS=http://0.0.0.0:8080
+ENV ASPNETCORE_URLS=http://0.0.0.0:10000
+EXPOSE 10000
 ENTRYPOINT ["dotnet", "ChatAIBackend.dll"]
