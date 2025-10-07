@@ -32,13 +32,13 @@ namespace ChatAIBackend
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+
+            // awlays use swagger in dev and prod
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseCors("AllowAll");
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseAuthorization();
           
@@ -46,7 +46,7 @@ namespace ChatAIBackend
             app.MapControllers();
 
             var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-            app.Run($"http://0.0.0.0:{port}");
+            app.Run($"http://0.0.0.0:10000{port}");
         }
     }
 }
