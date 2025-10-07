@@ -31,6 +31,12 @@ namespace ChatAIBackend
 
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<DB>();
+                dbContext.Database.Migrate();
+            }
+
             // Configure the HTTP request pipeline.
 
             // awlays use swagger in dev and prod
