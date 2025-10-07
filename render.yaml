@@ -19,7 +19,7 @@ services:
     buildCommand: |
       dotnet restore
       dotnet publish -c Release -o output
-    startCommand: dotnet output/ChatAlBackend.dll
+    startCommand: dotnet output/ChatAIBackend.dll
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
